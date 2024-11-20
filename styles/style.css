@@ -62,3 +62,38 @@ body {
   color: #fff;
   margin-top: 6px;
 }
+
+@media screen and (min-width: 768px) {
+  .buttons {
+    padding: 10px;
+    height: 360px;
+  }
+
+  .why,
+  .where,
+  .which,
+  .who,
+  .nine,
+  .one,
+  .two,
+  .ex,
+  .we,
+  .are,
+  .get {
+    height: 50px;
+    width: 168px;
+  }
+
+  .bot {
+    width: 56%;
+    height: 50px;
+  }
+
+  .hot,
+  .rem,
+  .see,
+  .got {
+    height: 50px;
+    width: 144px;
+  }
+}

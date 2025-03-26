@@ -34,7 +34,7 @@ button:active {
   padding: 25px;
 }
 
-#calculator{
+#calculator {
   font-family: Arial, sans-serif;
   background-color: black;
   border-radius: 15px;
@@ -53,7 +53,7 @@ button:active {
 }
 
 .operator-btn {
-  background-color: rgb(233, 168, 48);
+  background-color: #e9a830;
 }
 
 .operator-btn:hover {

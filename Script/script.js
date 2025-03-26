@@ -10,6 +10,7 @@ function clearDisplay () {
 
 function calculate () {
   try {
+    // display.value = eval('3 + 3')
     display.value = eval(display.value)
   }
   catch (error) {

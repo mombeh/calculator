@@ -1,23 +1,23 @@
 const display = document.getElementById('display')
 
-function appendToDisplay (input) {
+function appendToDisplay(input) {
   display.value += input
 }
 
-function clearDisplay () {
+function clearDisplay() {
   display.value = ''
 }
 
-function calculate () {
+function calculate() {
   try {
     if (typeof math !== 'undefined') {
-        display.value = math.evaluate(display.value)
+      display.value = math.evaluate(display.value)
     } else {
-        throw new Error('Math.js not loaded')
+      throw new Error('Math.js not loaded')
     }
-} catch (error) {
+  } catch (error) {
     display.value = 'Error'
-}
+  }
 }
 // Attach functions to the window to prevent linter warnings
 window.appendToDisplay = appendToDisplay

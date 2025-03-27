@@ -10,7 +10,16 @@ function clearDisplay () {
 
 function calculate () {
   try {
-    display.value = new Function('return ' + display.value)()
+    // Allow only numbers, basic math operators, decimals, and parentheses
+    if (!/^[\d+\-*/(). ]+$/.test(display.value)) {
+      throw new Error('Invalid input')
+    }
+
+    // Evaluate the expression safely
+    const result = Function(`"use strict"; return (${display.value})`)()
+    
+    // If result is a valid finite number, display it; otherwise, show 'Error'
+    display.value = Number.isFinite(result) ? result : 'Error'
   } catch (error) {
     display.value = 'Error'
   }

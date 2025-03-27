@@ -1,27 +1,23 @@
-const display = document.getElementById('display')
+const display = document.getElementById('display');
 
-function appendToDisplay (input) {
-  display.value += input
+function appendToDisplay(input) {
+  display.value += input;
 }
 
-function clearDisplay () {
-  display.value = ''
+function clearDisplay() {
+  display.value = '';
 }
 
-function calculate () {
+function calculate() {
   try {
-    // Allow only numbers, basic math operators, decimals, and parentheses
-    if (!/^[\d+\-*/(). ]+$/.test(display.value)) {
-      throw new Error('Invalid input')
-    }
-    
-    const result = Function(`"use strict"; return (${display.value})`)()
-    display.value = Number.isFinite(result) ? result : 'Error'
+    // Use math.js for safe calculations
+    display.value = math.evaluate(display.value);
   } catch (error) {
-    display.value = 'Error'
+    display.value = 'Error';
   }
 }
 
-window.appendToDisplay = appendToDisplay
-window.clearDisplay = clearDisplay
-window.calculate = calculate
+// Attach functions to the window to prevent linter warnings
+window.appendToDisplay = appendToDisplay;
+window.clearDisplay = clearDisplay;
+window.calculate = calculate;

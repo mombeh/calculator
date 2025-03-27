@@ -1,14 +1,14 @@
 const display = document.getElementById('display')
 
-function appendToDisplay(input) {
+function appendToDisplay (input) {
   display.value += input
 }
 
-function clearDisplay() {
+function clearDisplay () {
   display.value = ''
 }
 
-function calculate() {
+function calculate () {
   try {
     display.value = new Function('return ' + display.value)()
   } catch (error) {
@@ -16,8 +16,6 @@ function calculate() {
   }
 }
 
-// Attach functions to window object to avoid linter warnings
 window.appendToDisplay = appendToDisplay
 window.clearDisplay = clearDisplay
 window.calculate = calculate
-

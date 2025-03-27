@@ -10,11 +10,14 @@ function clearDisplay () {
 
 function calculate () {
   try {
-    // Use math.js for safe calculations
-    display.value = math.evaluate(display.value)
-  } catch (error) {
+    if (typeof math !== 'undefined') {
+        display.value = math.evaluate(display.value)
+    } else {
+        throw new Error('Math.js not loaded')
+    }
+} catch (error) {
     display.value = 'Error'
-  }
+}
 }
 // Attach functions to the window to prevent linter warnings
 window.appendToDisplay = appendToDisplay

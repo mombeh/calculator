@@ -1,43 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Calculator</title>
 </head>
+
 <body>
-    <div class="buttons">
-        <button class="empty"></button>
-        <div class="acs">
-            <button class="bot">AC</button>
-            <button class="hot">DEL</button>
-            <button class="rem">+</button>
-        </div>
-        <div>
-            <button class="nine">9</button>
-            <button class="one">8</button>
-            <button class="two">7</button>
-            <button class="ex">x</button>
-        </div>
-        <div>
-            <button class="why">6</button>
-            <button class="where">5</button>
-            <button class="which">4</button>
-            <button class="who">/</button>
-        </div>
-        <div>
-            <button style="background-color: #646262;
-            border-radius: 5px;border: none;width: 168px;height: 50px;margin: 1px;color: #fff;">1</button>
-            <button class="we">2</button>
-            <button class="are">3</button>
-            <button class="get">-</button>
-        </div>
-        <div>
-            <button class="got">0</button>
-            <button class="see">.</button>
-            <button class="bot">=</button>
+    <div id="calculator">
+        <input type="text" id="space">
+        <div id="operation">
+            <div id="main">
+                <button id="seven">7</button>
+                <button id="eigth">8</button>
+                <button id="nine">9</button>
+                <button id="times" class="operator-btn">&times;</button>
+            </div>
+            <div id="select">
+                <button id="four">4</button>
+                <button id="five">5</button>
+                <button id="six">6</button>
+                <button id="minus" class="operator-btn">&minus;</button>
+            </div>
+            <div id="nom">
+                <button id="number">1</button>
+                <button id="two">2</button>
+                <button id="three">3</button>
+                <button id="plus" class="operator-btn">&plus;</button>
+            </div>
+            <div id="arl">
+                <button id="zero">0</button>
+                <button id="dot">.</button>
+                <button id="percent">&percnt;</button>
+                <button id="division" class="operator-btn">&divide;</button>
+            </div>
+            <div id="calculator-keys">
+                <button id="one-delete">DEL</button>
+                <button id="erase">AC</button>
+                <button onclick="calculateResult()" id="operator">&equals;</button>
+            </div>
         </div>
     </div>
+    <script src="Script/script.js"></script>
 </body>
+
 </html>
